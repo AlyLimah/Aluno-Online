@@ -1,0 +1,230 @@
+# 🎓 Aluno Online - Backend Java Spring Boot
+
+## 📌 Sobre o Projeto
+
+O **Aluno Online** é uma API REST desenvolvida com **Java + Spring Boot** para gerenciamento acadêmico de alunos.
+
+O sistema permite cadastrar alunos, disciplinas, professores e controlar informações acadêmicas através de endpoints REST.
+
+Este projeto foi criado com o objetivo de praticar conceitos de desenvolvimento back-end utilizando:
+
+* Java
+* Spring Boot
+* Spring Data JPA
+* Hibernate
+* MySQL
+* Maven
+* API REST
+
+---
+
+# 🚀 Tecnologias Utilizadas
+
+| Tecnologia      | Descrição                     |
+| --------------- | ----------------------------- |
+| Java 17+        | Linguagem principal           |
+| Spring Boot     | Framework back-end            |
+| Spring Data JPA | Persistência de dados         |
+| Hibernate       | ORM                           |
+| MySQL           | Banco de dados                |
+| Maven           | Gerenciamento de dependências |
+
+
+---
+
+# 📂 Estrutura do Projeto
+
+```bash
+src
+ ├── main
+ │   ├── java
+ │   │    └── com.projeto.alunoonline
+ │   │          ├── controller
+ │   │          ├── service
+ │   │          ├── repository
+ │   │          ├── model
+ │   │          └── dto
+ │   └── resources
+ │         ├── application.properties
+ │         └── data.sql
+```
+
+---
+
+# ⚙️ Funcionalidades
+
+## 👨‍🎓 Alunos
+
+* Cadastrar aluno
+* Buscar aluno por ID
+* Listar todos os alunos
+* Atualizar dados do aluno
+* Remover aluno
+
+## 📚 Disciplinas
+
+* Cadastrar disciplina
+* Listar disciplinas
+* Associar disciplina ao aluno
+
+## 👨‍🏫 Professores
+
+* Cadastro de professores
+* Listagem de professores
+
+---
+
+# 🛠️ Configuração do Projeto
+
+## 1️⃣ Clonar o repositório
+
+```bash
+git clone https://github.com/seu-usuario/aluno-online.git
+```
+
+---
+
+## 2️⃣ Entrar na pasta do projeto
+
+```bash
+cd aluno-online
+```
+
+---
+
+## 3️⃣ Configurar o banco de dados
+
+Crie um banco no MySQL:
+
+```sql
+CREATE DATABASE aluno_online;
+```
+
+---
+
+## 4️⃣ Configurar o application.properties
+
+```properties
+spring.datasource.url=jdbc:mysql://localhost:3306/aluno_online
+spring.datasource.username=root
+spring.datasource.password=sua_senha
+
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.show-sql=true
+spring.jpa.properties.hibernate.format_sql=true
+```
+
+---
+
+## 5️⃣ Executar o projeto
+
+Pelo Maven:
+
+```bash
+mvn spring-boot:run
+```
+
+Ou execute a classe principal:
+
+```java
+@SpringBootApplication
+public class AlunoOnlineApplication {
+    public static void main(String[] args) {
+        SpringApplication.run(AlunoOnlineApplication.class, args);
+    }
+}
+```
+
+---
+
+# 🌐 Endpoints da API
+
+## 👨‍🎓 Alunos
+
+| Método | Endpoint     | Descrição             |
+| ------ | ------------ | --------------------- |
+| GET    | /alunos      | Lista todos os alunos |
+| GET    | /alunos/{id} | Busca aluno por ID    |
+| POST   | /alunos      | Cria aluno            |
+| PUT    | /alunos/{id} | Atualiza aluno        |
+| DELETE | /alunos/{id} | Remove aluno          |
+
+---
+
+## 📚 Disciplinas
+
+| Método | Endpoint     | Descrição           |
+| ------ | ------------ | ------------------- |
+| GET    | /disciplinas | Lista disciplinas   |
+| POST   | /disciplinas | Cria disciplina     |
+
+## Professor
+| Método | Endpoint        | Descrição             |
+| ------ | ------------    | --------------------- |
+| GET    | /professor      | Lista todos os profs  |
+| GET    | /professor/{id} | Busca prof por ID     |
+| POST   | /professor      | Cria professor        |
+| PUT    | /professor/{id} | Atualiza professor    |
+| DELETE | /professor/{id} | Remove professor      |
+
+
+---
+
+# 📦 Exemplo de JSON
+
+## POST /alunos
+
+```json
+{
+  "nome": "João Silva",
+  "email": "joao@email.com",
+  "matricula": "2025001"
+}
+```
+
+---
+
+# 🧠 Conceitos Aplicados
+
+* API REST
+* Arquitetura em camadas
+* Injeção de Dependência
+* CRUD completo
+* Relacionamentos JPA
+* DTOs
+* Tratamento de exceções
+* Persistência de dados
+
+---
+
+# 📖 Relacionamentos JPA Utilizados
+
+Exemplo:
+
+```java
+@OneToMany
+@ManyToOne
+@OneToOne
+@ManyToMany
+```
+
+---
+
+# ✅ Melhorias Futuras
+
+* Autenticação com Spring Security
+* JWT
+* Swagger/OpenAPI
+* Testes unitários
+* Docker
+* Deploy na nuvem
+
+---
+
+# 👩‍💻 Autor
+
+Desenvolvido por AlyLima.
+
+---
+
+
