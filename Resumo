@@ -60,17 +60,20 @@ src
 * Listar todos os alunos
 * Atualizar dados do aluno
 * Remover aluno
+# AlunoController, AlunoService,AlunoRepository, Aluno
 
 ## 📚 Disciplinas
 
 * Cadastrar disciplina
 * Listar disciplinas
 * Associar disciplina ao aluno
+* DisciplinaController, DisciplinaService, DisciplinaRepository, Disciplina
 
 ## 👨‍🏫 Professores
 
 * Cadastro de professores
 * Listagem de professores
+* ProfessorController, ProfessorService, ProfessorRepository, Professor
 
 ---
 
