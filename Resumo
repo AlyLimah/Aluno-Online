@@ -167,6 +167,19 @@ public class AlunoOnlineApplication {
 | PUT    | /professor/{id} | Atualiza professor    |
 | DELETE | /professor/{id} | Remove professor      |
 
+## ENUM
+
+APROVADO
+REPROVADO
+TRANCADO
+MATRICULADO
+
+## DTOS
+
+AtualizarNotasRequestDTO
+DisciplinasAlunoResponseDTO
+HistoricoAlunoResponseDTO
+
 
 ---
 
